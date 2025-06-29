@@ -6,6 +6,7 @@ jobs:
   hello-world-job:
     runs-on: ubuntu-latest
     steps:
+     
      - name: checkout repo code
-       uses: actions/checkout@4
+       uses: actions/checkout@4.2.2
      - run: echo "$(cat hello_world.txt)"

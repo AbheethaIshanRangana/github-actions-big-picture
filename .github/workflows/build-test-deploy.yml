@@ -44,17 +44,17 @@ jobs:
         with: 
           token: ${{ secrets.GITHUB_TOKEN }}
       - name: use node.js
-        uses: actions/setup-node@4
+        uses: actions/setup-node@v3.9.1
         with: 
           node-version: '20.x'
       - name: configure github pages
-        uses: actions/configure-pages@4
+        uses: actions/configure-pages@v5.0.0
         with:
           static_site_generator: next
       - run: npm install
       - run: npm build
       - name: upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4.6.2
         with:
           path: './out'
       - name: deploy

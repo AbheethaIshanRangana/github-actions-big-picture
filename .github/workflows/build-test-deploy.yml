@@ -59,5 +59,7 @@ jobs:
           path: './out'
       - name: deploy
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4.0.5
+        with: 
+          artifact_name: artifact.zip
     
